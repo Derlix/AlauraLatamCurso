@@ -1,12 +1,32 @@
-let numeroDeUsuario = prompt("Ingresa un numero por favor: ")
-let numeroSecreto = 6;
+//Variables
 
+let numeroSecreto = 5;
+let contador = 1;
+let numeroDeUsuario = 0;
+/* Este codigo realiza la comparacion*/
 
-console.log("Numero ingresado:" + numeroDeUsuario);
+while(numeroSecreto != numeroDeUsuario){
+    numeroDeUsuario = prompt("Ingresa un numero por favor: ");
 
-if (numeroDeUsuario == numeroSecreto){
-    alert('Acertaste el numero');
+    console.log("Numero ingresado:" + numeroDeUsuario);
+
+    if (numeroDeUsuario == numeroSecreto){
+        //Si entro por aca significa que acertamos y la condicion 
+        alert(`Acertaste, el numero es: ${numeroDeUsuario} Intentos: ${contador}`);
+    }else{
+        if(numeroDeUsuario > numeroSecreto){
+            alert('El numero secreto es menor');
+        }else{
+            alert('El numero secreto es mayor');
+        }
+        contador = contador + 1;
+        //si entro por aca significa que la condicion no se cumplio 
+        //alert('No acertaste el numero')
+    }
+    
 }
+/*
+
 
 // let numero1 = 11
 
@@ -80,3 +100,4 @@ let edad9 = ("Ingresa tu edad por favor");
 if(edad9>=18){
     alert("¡Puedes obtener tu licencia de conducir!");
 }
+*/
