@@ -1,5 +1,8 @@
-let numeroSecreto = generarNumeroSecreto(10);
-let intentos = 0;
+
+let numeroMaximo = 10;
+let listaNumerosSortados = [];
+let numeroSecreto = generarNumeroSecreto();
+let intentos = 1;
 
 function asignarTextoElemento(elemento, texto){
     let elementoHTML = document.querySelector(elemento);
@@ -7,15 +10,29 @@ function asignarTextoElemento(elemento, texto){
     elementoHTML.innerHTML = texto;
 };
 
-function generarNumeroSecreto(max){
-    return Math.floor(Math.random()*max) +1;
+function generarNumeroSecreto(){
+    let numeroGenerado = Math.floor(Math.random()*numeroMaximo) +1;
+    console.log(numeroGenerado);
+    console.log(listaNumerosSortados);
+    //Si ya sortemamos todo los numeros
+    if(listaNumerosSortados.length == numeroMaximo){
+        asignarTextoElemento('p','Ya sesortearon todos los numeros posibles');
+    }else{
+        if(listaNumerosSortados.includes(numeroGenerado)){
+            return generarNumeroSecreto();
+        }else{
+            listaNumerosSortados.push(numeroGenerado);
+            return numeroGenerado;
+        }
+
+    }
+    
     
 }
 
 function verificarIntento(){
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
     
-    console.log(numeroDeUsuario===numeroSecreto);
     if(numeroDeUsuario===numeroSecreto){
         asignarTextoElemento('p',`Acertaste el numero en ${intentos} ${(intentos ===1) ? 'vez': 'veces'}`);
         document.getElementById('reiniciar').removeAttribute('disabled');
@@ -37,11 +54,11 @@ function limpiarCaja(){
 }
 
 function condicionsIniciales(){
-    asignarTextoElemento('h1','Juego del numero secreto');
-    asignarTextoElemento('p','Indica un numero del 1 al 10');
-    mensajesIniciales();
-    numeroSecreto = generarNumeroSecreto(10);
     intentos = 1;
+    asignarTextoElemento('h1','Juego del numero secreto');
+    asignarTextoElemento('p',`Indica un numero del 1 al ${numeroMaximo}`);
+    numeroSecreto = generarNumeroSecreto();
+   
 }
 
 function reiniciarJuego(){
@@ -52,7 +69,7 @@ function reiniciarJuego(){
     //Desabilitar el boton de nuevo juego
     condicionsIniciales();
     //Iniciar el numero intentos 
-    document.querySelector('#reiniciar').setAttribute('disabled','true');
+    document.getElementById('reiniciar').setAttribute('disabled', 'true');
 }
 
 condicionsIniciales();
