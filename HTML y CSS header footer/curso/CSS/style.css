@@ -19,7 +19,7 @@ body{
 }
 
 .presentacion {
-    margin: 10% 15%;
+    padding: 6% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -80,3 +80,31 @@ body{
 .presentacion__contenido__titulo:hover{
     background-color: #272727;
 }
+
+.pie{
+    background-color: #22D4FD;
+    color: #000000;
+    padding: 24px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-seri;
+    font-weight: 400;
+}
+
+.cabeza{
+    padding: 2% 0% 0% 15%;
+}
+
+.navegador{
+    display: flex;
+    gap:80px;
+}
+
+.ClasesA{
+    font-family:'Montserrat', sans-seri ;
+    font-size: 24px;
+    font-weight: 600;
+    color:#22D4FD;
+    text-decoration: none;
+}
+
