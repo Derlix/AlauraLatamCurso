@@ -1,0 +1,165 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --colorFont:#0A3871 ;
+}
+
+.custom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajustar altura según necesidad */
+}
+
+
+
+.derecha{
+    background-color: white;
+    border-radius: 24px;
+    height: 100%;
+}
+
+body{
+    background-color: #E9ECF8;
+    
+}
+
+.derecha {
+    background-color: white; 
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    height: 944px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 50px;
+    
+}
+
+.derecha > * {
+    margin-top: 10px; /* Aplica margen superior a los elementos internos */
+}
+
+.btn-dark {
+    
+    background-color: #0A3871; 
+    border-color: #343a40;
+}
+
+.btn-secondary {
+    background-color: #D8DFE8;
+    border-color: #0A3871 ;
+    color: white; 
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+.container-fluid {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-dark {
+    height: 100%;
+}
+
+.bg-light {
+    height: 100%;
+}
+
+
+.transparent-input {
+    background-color: transparent; /* Establece el fondo transparente */
+    border: none; /* Elimina el borde del input */
+    border-bottom: 1px solid #ccc; /* Añade un borde inferior para distinguir el input */
+    color: #000; /* Color de texto, puedes ajustarlo según tu diseño */
+    padding: 10px 0; /* Ajusta el padding según tus preferencias */
+    outline: none; /* Elimina el contorno al hacer focus */
+    height: 500px;
+    font-size: 32px;
+}
+
+.transparent-input {
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    border-bottom: 1px solid #ccc; /* Borde inferior opcional para distinguir */
+    color: #000; /* Color de texto */
+    padding: 10px 0; /* Padding interior */
+    outline: none; /* Sin contorno al enfocar */
+    font-size: 16px; /* Tamaño de fuente */
+    
+    width: 100%; /* Ancho completo del contenedor */
+}
+
+.btn{
+    width: 328px;
+    height: 67px;
+    font-size: 16px;
+    margin: 16px;
+}
+
+.btn-secondary{
+    color: var(--colorFont);
+}
+
+@media (max-width: 768px) {
+    .custom-container {
+        height: auto; /* Ajustar altura automática en dispositivos pequeños */
+        padding: 20px; /* Añadir espacio alrededor en dispositivos pequeños */
+        
+    }
+
+    .hide-on-small {
+        display: none; 
+    }
+
+    .transparent-input{
+        height: auto;
+    }
+
+    .izquierda{
+        width: auto;
+    }
+}
+
+.indicaciones{
+    margin-top: 100px;
+    font-size: 2rem;
+}
+
+.izquierda{
+    width: 60%;
+    padding-top: 10px;
+}
+
+.copiar{
+    color: var(--colorFont);
+    background-color: white;
+    border: 1px solid var(--colorFont);
+    box-shadow: #343a40;
+}
+
+.derecha {
+    background-color: white; 
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Ajusta el ancho al 100% para ocupar toda la columna */
+    margin-top: 50px;
+}
