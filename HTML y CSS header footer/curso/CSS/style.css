@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 
+:root{
+    --color-primario:#000000;
+    --color-secundario:#f6f6f6f6;
+    --color-terciario: #22D4FD;
+
+    --fuente-monserrat:'Montserrat', sans-serif;
+    --fuente-krona:'Krona One', sans-serif;
+}
+
 * {
     padding: 0;
     margin:0;
@@ -9,13 +18,13 @@
 body{
     height: 100vh;
     box-sizing: border-box;
-    background-color: #000000;
-    color: #F6F6F6;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
 }
 
 
 .titulo-destaque {
-    color: #22D4FD; ;
+    color: var(--color-terciario) ;
 }
 
 .presentacion {
@@ -34,12 +43,12 @@ body{
 
 .presentacion__contenido__titulo{
     font-size: 36px;
-    font-family: 'Krona One', sans-serif;
+    font-family: var(--fuente-krona);
 }
 
 .presentacion__contenido__texto{
     font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fuente-monserrat);
 }
 
 .presentacion__enlaces{
@@ -58,9 +67,9 @@ body{
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
-    color: #F6F6F6;
-    font-family: 'Montserrat', sans-serif;
-    border: 2px solid #22D4FD;
+    color: var(--color-secundario);
+    font-family: var(--fuente-monserrat);
+    border: 2px solid var(--color-terciario);
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -72,7 +81,7 @@ body{
 }
 
 .presentacion_enlaces__subtitulo{
-    font-family: 'Krona one', sans-serif;
+    font-family: var(--fuente-krona);
     font-size:24px ;
     font-weight: 400;
 }
@@ -82,12 +91,12 @@ body{
 }
 
 .pie{
-    background-color: #22D4FD;
-    color: #000000;
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
     padding: 24px;
     text-align: center;
     font-size: 24px;
-    font-family: 'Montserrat', sans-seri;
+    font-family: var(--fuente-monserrat);
     font-weight: 400;
 }
 
@@ -101,10 +110,10 @@ body{
 }
 
 .ClasesA{
-    font-family:'Montserrat', sans-seri ;
+    font-family:var(--fuente-monserrat) ;
     font-size: 24px;
     font-weight: 600;
-    color:#22D4FD;
+    color:var(--color-terciario);
     text-decoration: none;
 }
 
