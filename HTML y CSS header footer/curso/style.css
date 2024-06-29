@@ -61,10 +61,22 @@ body{
     color: #F6F6F6;
     font-family: 'Montserrat', sans-serif;
     border: 2px solid #22D4FD;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.presentacion__enlaces__link:hover{
+    background-color: #272727;
 }
 
 .presentacion_enlaces__subtitulo{
     font-family: 'Krona one', sans-serif;
     font-size:24px ;
     font-weight: 400;
+}
+
+.presentacion__contenido__titulo:hover{
+    background-color: #272727;
 }
